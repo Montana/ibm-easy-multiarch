@@ -22,7 +22,6 @@ matrix:
        - hostnamectl
        - python --version
        - docker --version
-       - docker ps -a 
        install: skip
        before_script: skip
        script: python hello.py
@@ -39,7 +38,6 @@ matrix:
        - hostnamectl
        - python --version
        - docker --version
-       - docker ps -a 
        install: skip
        before_script: skip
        script: python hello.py
@@ -56,7 +54,6 @@ matrix:
        - hostnamectl
        - python --version
        - docker --version
-       - docker ps -a 
        install: skip
        before_script: skip
        script: python hello.py
