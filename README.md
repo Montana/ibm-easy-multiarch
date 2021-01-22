@@ -1,8 +1,6 @@
 # IBM easy multi arch build
 
-Multi arch show off using IBM archs for Travis CI.
-
-This `.travis.yml` file tests my quick Python app I made entitled `hello.py` that looks like this: 
+This `.travis.yml` file tests my quick Python app I made entitled `hello.py`, and to show off a multi arch build: 
 
 ```python
 x = 1
