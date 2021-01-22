@@ -1,5 +1,7 @@
 # IBM easy multi arch build
 
+I recommend visiting this link first to see my prior builds: https://travis-ci.com/github/Montana/ibm-easy-multiarch/builds/214082235.
+
 This `.travis.yml` file tests my quick Python app I made entitled `hello.py`, and to show off a multi arch build: 
 
 ```python
