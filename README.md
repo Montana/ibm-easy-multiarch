@@ -12,15 +12,7 @@ if x == 1:
 # Author Montana Mendy
 ```
 
-In all three `archs`: 
-
-```bash
-arch: amd64
-arch: ppc64le
-arch: s390x
-```
-
-It built `hello.py` very quickly, and was extremely straight forward. 
+It built `hello.py` very quickly, and was extremely straight forward, in all three archs.
 
 ### End Result 
 
