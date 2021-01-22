@@ -10,7 +10,7 @@ matrix:
   fast_finish: true
   include:
 
-     - name: "IBM multi arch build using Python 3.7 on linux amd64 (x86_64) Intel, 64-bit, Little-endian"
+     - name: "Multi arch build using Python 3.7 on linux amd64 (x86_64) Intel, 64-bit, Little-endian"
        os: linux
        arch: amd64
        language: python
