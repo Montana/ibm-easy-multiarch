@@ -2,7 +2,7 @@
 
 I recommend visiting this link first to see my prior builds: https://travis-ci.com/github/Montana/ibm-easy-multiarch/builds
 
-This `.travis.yml` file tests my quick Python app I made entitled `hello.py`, and to show off a multi arch build: 
+This `.travis.yml` file tests my quick Python app I made entitled `hello.py`, and to show off a multi arch build, I can remove `AMD` if need be. 
 
 ```python
 x = 1
