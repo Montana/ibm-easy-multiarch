@@ -30,6 +30,6 @@ It built my Python script with the correct answer which is `x=1`:
 
 ![Python](python.png) 
 
-All three `archs` built, and ran my `hello.py` script. 
+All three `archs` built, and ran my `hello.py` script:
 
 ![Builds](builds.png)
