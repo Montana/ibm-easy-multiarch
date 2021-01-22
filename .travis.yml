@@ -9,7 +9,26 @@ services:
 matrix:
   fast_finish: true
   include:
-     - name: "IBM multi arch Python 3.7 build on Linux ppc64le"
+
+     - name: "IBM multi arch build using Python 3.7 on linux amd64 (x86_64) Intel, 64-bit, Little-endian"
+       os: linux
+       arch: amd64
+       language: python
+       python: 3.7
+       compiler:
+       - gcc
+       - clang
+       before_install:
+       - hostnamectl
+       - python --version
+       - docker --version
+       install: skip
+       before_script: skip
+       script: python hello.py
+       env:
+        - LIB_PATH="/usr/bin/shared/x86_64/v1"
+
+     - name: "IBM multi arch build using Python 3.7 on Linux ppc64le"
        os: linux
        dist: bionic
        arch: ppc64le
@@ -19,12 +38,13 @@ matrix:
        - hostnamectl
        - python --version
        - docker --version
+       install: skip
+       before_script: skip
        script: python hello.py
        env:
         - LIB_PATH="/usr/bin/shared/x86_64/v1"
 
-   
-   - name: "IBM multi arch Python 3.7 build on Linux s390x"
+     - name: "IBM multi arch build using Python 3.7 on Linux s390x"
        os: linux
        dist: bionic
        arch: s390x
@@ -34,6 +54,8 @@ matrix:
        - hostnamectl
        - python --version
        - docker --version
+       install: skip
+       before_script: skip
        script: python hello.py
        env:
        - LIB_PATH="/usr/bin/shared/x86_64/v1"
