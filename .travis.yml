@@ -5,14 +5,7 @@ sudo: required
 
 services:
   - docker
-  
-  stages:
-  - x86 build
-  - ppc64le build
-  - s390x build 
-  - Multi arch build (ppc64le, s390x)
-
-
+ 
 matrix:
   fast_finish: true
   include:
@@ -34,8 +27,7 @@ matrix:
        script: python hello.py
        env:
         - LIB_PATH="/usr/bin/shared/x86_64/v1"
-       stage: x86 build
-
+      
      - name: "IBM multi arch build using Python 3.7 on Linux ppc64le"
        os: linux
        dist: bionic
@@ -50,8 +42,7 @@ matrix:
        before_script: skip
        script: python hello.py
        env:
-        - LIB_PATH="/usr/bin/shared/x86_64/v1"
-       stage: ppc64le build 
+        - LIB_PATH="/usr/bin/shared/x86_64/v1" 
 
      - name: "IBM multi arch build using Python 3.7 on Linux s390x"
        os: linux
@@ -68,10 +59,8 @@ matrix:
        script: python hello.py
        env:
        - LIB_PATH="/usr/bin/shared/x86_64/v1"
-       stage: s390x build 
        
      - name: "IBM multi arch build using Python 3.7 on Linux s390x and Linux ppc64le"
-     
        os: linux
        dist: bionic
        arch: 
@@ -88,5 +77,3 @@ matrix:
        script: python hello.py
        env:
        - LIB_PATH="/usr/bin/shared/x86_64/v1"
-       stage: Multi arch build (ppc64le, s390x)
-       
